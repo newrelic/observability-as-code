@@ -1,0 +1,60 @@
+# Developer Toolkit
+
+The New Relic Developer Toolkit is suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
+
+
+### Toolkit
+
+| Tool | Description | Links |
+| ---- | ----------- | ----- |
+| New Relic API Client | The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications. | Docs - Repo - Roadmap |
+| New Relic CLI | The New Relic CLI allows integrating New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline, the `nr-cli` will be there | Docs - Repo - Roadmap |
+| New Relic provider for Terraform | The New Relic provider for Terraform enables Observability as Code, reducing developer toil, and allows users to manage their entire ecosystem in a single place. | [Docs](https://www.terraform.io/docs/providers/newrelic/index.html) - [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/) - Roadmap |
+| New Relic AWS CloudFormation Integration | The AWS CloudFormation Integration enables developers using CloudFormation to easily provision a subset of New Relic resources. | [Docs](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration) - [Repo](https://github.com/newrelic/cloudformation-partner-integration) - Roadmap |
+
+
+## Helpful Links
+
+### Developer Toolkit
+
+These links are specific to the Developer Toolkit
+
+* Roadmap
+* [Team Kanban Board](https://github.com/orgs/newrelic/projects/6)
+
+### New Relic
+
+* [New Relic One](https://one.newrelic.com)
+* [New Relic Developer Docs](https://developer.newrelic.com/)
+* [New Relic Forums](https://discuss.newrelic.com/c/build-on-new-relic/)
+
+
+## Support
+
+New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR SUPPORT, although you can report issues and contribute to the project here on GitHub.
+
+_Please do not report issues with this software to New Relic Global Technical Support._
+
+
+### Community
+
+New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
+
+https://discuss.newrelic.com/c/build-on-new-relic/
+
+
+### Issues / Enhancement Requests
+
+Issues and enhancement requests can be submitted in the [Issues tab of this repository](https://github.com/newrelic/developer-toolkit/issues). Please search for and review the existing open issues before submitting a new issue.
+
+
+### Contributing
+
+Contributions are welcome (and if you submit a Enhancement Request, expect to be invited to contribute it yourself :grin:). Please review our [Contributors Guide](CONTRIBUTING.md).
+
+Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource@newrelic.com.
+
+
+## Open Source License
+
+This project is distributed under the [Apache 2 license](LICENSE).
