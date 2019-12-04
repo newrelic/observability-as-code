@@ -2,31 +2,60 @@
 
 The New Relic Developer Toolkit is suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
+* General Resources
+  * Roadmap - Current and future work priorities
+  * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
+* Tools in the Toolkit
+  * [New Relic Terraform Provider](#new-relic-terraform-provider)
+  * [New Relic API Client](#new-relic-api-client)
+  * [New Relic CLI](#new-relic-cli)
+  * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
+* Support
+  * [Helpful Links](#helpful-links)
+  * [Community](#community)
+  * [Issues or Enhancement Requests](#issues-or-enhancement-requests)
+  * [Contributing](#contributing)
+  * [Open Source License](#open-source-license)
 
-### Toolkit
+## Tools in the Toolkit
 
-| Tool | Description | Links |
-| ---- | ----------- | ----- |
-| New Relic API Client | The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications. | Docs - Repo - Roadmap |
-| New Relic CLI | The New Relic CLI allows integrating New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline, the `nr-cli` will be there | Docs - Repo - Roadmap |
-| New Relic provider for Terraform | The New Relic provider for Terraform enables Observability as Code, reducing developer toil, and allows users to manage their entire ecosystem in a single place. | [Docs](https://www.terraform.io/docs/providers/newrelic/index.html) - [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/) - Roadmap |
-| New Relic AWS CloudFormation Integration | The AWS CloudFormation Integration enables developers using CloudFormation to easily provision a subset of New Relic resources. | [Docs](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration) - [Repo](https://github.com/newrelic/cloudformation-partner-integration) - Roadmap |
+#### New Relic Terraform Provider
 
+The New Relic Terraform Provider enables Observability as Code, reducing developer toil, and allows users to manage their entire ecosystem in a single place.
 
-## Helpful Links
-
-### Developer Toolkit
-
-These links are specific to the Developer Toolkit
-
+* [Documentation](https://www.terraform.io/docs/providers/newrelic/index.html)
+* [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/)
+* [Project boards](https://github.com/terraform-providers/terraform-provider-newrelic/projects)
 * Roadmap
-* [Team Kanban Board](https://github.com/orgs/newrelic/projects/6)
 
-### New Relic
 
-* [New Relic One](https://one.newrelic.com)
-* [New Relic Developer Docs](https://developer.newrelic.com/)
-* [New Relic Forums](https://discuss.newrelic.com/c/build-on-new-relic/)
+#### New Relic API Client
+
+The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
+
+* Documentation
+* Repo
+* Project Boards
+* Roadmap
+
+
+#### New Relic CLI
+
+The New Relic CLI allows integrating New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline, the `nr-cli` will be there
+
+* Documentation
+* Repo
+* Project Boards
+* Roadmap
+
+#### New Relic AWS CloudFormation Integration
+
+The AWS CloudFormation Integration enables developers using CloudFormation to easily provision a subset of New Relic resources.
+
+* [Documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration)
+* [Repo](https://github.com/newrelic/cloudformation-partner-integration)
+* [Project Boards](https://github.com/newrelic/cloudformation-partner-integration/projects)
+* Roadmap
 
 
 ## Support
@@ -35,6 +64,11 @@ New Relic has open-sourced this project. This project is provided AS-IS WITHOUT 
 
 _Please do not report issues with this software to New Relic Global Technical Support._
 
+### Helpful Links
+
+* [New Relic One](https://one.newrelic.com)
+* [New Relic Developer Docs](https://developer.newrelic.com/)
+* [New Relic Forums](https://discuss.newrelic.com/c/build-on-new-relic/)
 
 ### Community
 
@@ -43,7 +77,7 @@ New Relic hosts and moderates an online forum where customers can interact with 
 https://discuss.newrelic.com/c/build-on-new-relic/
 
 
-### Issues / Enhancement Requests
+### Issues or Enhancement Requests
 
 Issues and enhancement requests can be submitted in the [Issues tab of this repository](https://github.com/newrelic/developer-toolkit/issues). Please search for and review the existing open issues before submitting a new issue.
 
@@ -55,6 +89,6 @@ Contributions are welcome (and if you submit a Enhancement Request, expect to be
 Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource@newrelic.com.
 
 
-## Open Source License
+### Open Source License
 
 This project is distributed under the [Apache 2 license](LICENSE).
