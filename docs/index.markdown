@@ -41,7 +41,7 @@ The New Relic Client provides the building blocks for many tools in the toolkit,
 
 #### New Relic CLI
 
-The New Relic CLI allows integrating New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
+The New Relic CLI enables integration of New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
 
 * Documentation
 * Repo
