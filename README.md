@@ -5,13 +5,7 @@ The New Relic Developer Toolkit is suite of tools expressly built to ease the co
 For further information, please see the [Developer Toolkit](https:///newrelic.github.io/developer-toolkit/) site.
 
 
-## Support
-
-New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR SUPPORT, although you can report issues and contribute to the project here on GitHub.
-
-_Please do not report issues with this software to New Relic Global Technical Support._
-
-### Community
+## Community
 
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
@@ -33,3 +27,31 @@ Keep in mind that when you submit your pull request, you'll need to sign the CLA
 ### Open Source License
 
 This project is distributed under the [Apache 2 license](LICENSE).
+
+### Support
+
+New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR SUPPORT, although you can report issues and contribute to the project here on GitHub.
+
+_Please do not report issues with this software to New Relic Global Technical Support._
+
+## Development
+
+### Requirements
+
+This repo mostly contains a site for GitHub Pages, which is rendered via
+Jekyll.  In order to test local changes, you'll need the following:
+
+* Ruby 2.6.5 (rbenv suggested!)
+* Bundler
+
+### Running Locally
+
+Once you have installed the above requirements:
+
+```
+cd docs/
+
+bundle install
+
+bundle exec jekyell serve
+```
