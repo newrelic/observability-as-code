@@ -4,24 +4,59 @@ title: "Roadmap"
 permalink: /roadmap/
 ---
 
----
----
-# Note that this is a work-in-progress, and subject to change!
----
----
+## Introduction
 
-## Context
+This is a community driven project, sponsored by New Relic, to build a
+community around Observability as Code with New Relic. This documentation will
+define the initial problem space, identify who is impacted and provide a
+roadmap for success.
 
-The Developer Toolkit is a set of tools that simplify New Relic configuration and management. Enabling developers to implement Observability as Code through industry standard frameworks such as Terraform and CloudFormation, or integrate into their existing workflow with the New Relic CLI. For those who require fine-grained control, the New Relic Client takes all of the guesswork out of directly using New Relic APIs.
+### Get Involved
+
+In the future, we will establish a [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments) process
+as the channel for driving this roadmap. Currently, we are using GitHub to
+communicate with the community and represent a source of truth. Please use the
+following tools to contribute:
+
+* [Issues](https://github.com/newrelic/developer-toolkit/issues) - The
+  easiest way to get involved is to identify a need, and report it as an issue
+  on this GitHub repo.
+* [Pull Requests](https://github.com/newrelic/developer-toolkit/pulls) - Want
+  to directly contribue? Open a PR to add some documentation, fix a grammatical
+  error, or add a feature to the backlog. Community review of PRs in-flight are
+  also more than welcome!
+
+
+## Overview
+
+The Developer Toolkit is a set of tools that simplify New Relic configuration
+and management. Enabling developers to implement Observability as Code through
+industry standard frameworks such as Terraform and CloudFormation, or integrate
+into their existing workflow with the New Relic CLI. For those who require
+fine-grained control, the New Relic Client takes all of the guesswork out of
+directly using New Relic APIs.
 
 
 ## Personas
 
-**Software Engineer** - A software engineer is someone who is writing, deploying, and managing the lifecycle of any software stack that utilizes New Relic. As the owner of the application, they are responsible for managing all Alerts, Dashboards, Nerdpacks, and other New Relic resources specific to their application.
+**Software Engineer** - A software engineer is someone who is writing,
+deploying, and managing the lifecycle of any software stack that utilizes New
+Relic. As the owner of the application, they are responsible for managing all
+Alerts, Dashboards, Nerdpacks, and other New Relic resources specific to their
+application.
 
-**Site Reliability Engineer** - A Site Reliability Engineer (SRE) is an individual who is responsible for the stability of the entire software stack.  They assist Software Engineers with proper New Relic configuration, and provide overall guidance across teams.  Working with multiple teams becomes difficult when they do not operate in a similar way, so SREs strive to develop easy to follow standards.
+**Site Reliability Engineer** - A Site Reliability Engineer (SRE) is an
+individual who is responsible for the stability of the entire software stack.
+They assist Software Engineers with proper New Relic configuration, and provide
+overall guidance across teams.  Working with multiple teams becomes difficult
+when they do not operate in a similar way, so SREs strive to develop easy to
+follow standards.
 
-**Security Engineer** - A Security Engineer is someone responsible for auditing and verify compliance of their software.  In order to facilitate this, New Relic has been made a requirement for all services, and as such needs specific tagging and configuration across all assets.  When faced with any reasonable sized organization this becomes a daunting task.
+**Security Engineer** - A Security Engineer is someone responsible for auditing
+and verify compliance of their software.  In order to facilitate this, New
+Relic has been made a requirement for all services, and as such needs specific
+tagging and configuration across all assets.  When faced with any reasonable
+sized organization this becomes a daunting task.
 
 
 ## Job Stories
@@ -45,15 +80,23 @@ The Developer Toolkit is a set of tools that simplify New Relic configuration an
 
 ## Developer Toolkit v1
 
-To solve for the above problems, the initial version of the Developer Toolkit will contain the following resources.  All resources shall be built as Open Source projects, and actively engage with the broader community.
+To solve for the above problems, the initial version of the Developer Toolkit
+will contain the following resources.  All resources shall be built as Open
+Source projects, and actively engage with the broader community.
 
-* **[New Relic Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic/)** - The New Relic Terraform Provider enables Observability as Code, reduces developer toil, and allows users to manage their entire ecosystem in a single place.
+* **[New Relic Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic/)**
+  - The New Relic Terraform Provider enables Observability as Code, reduces
+  developer toil, and allows users to manage their entire ecosystem in a single
+  place.
 
    * Built on the New Relic Client
    * Full implementation of APIs available through the New Relic Client
    <br/>
 
-* **New Relic Client** - The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
+* **New Relic Client** - The New Relic Client provides the building blocks for
+  many tools in the toolkit, enabling quick access to the suite of New Relic
+  APIs.  As a library, it can also be leveraged within your own custom
+  applications.
 
    * Full support for the following New Relic API endpoints:
      * APM REST v2 API
@@ -62,7 +105,9 @@ To solve for the above problems, the initial version of the Developer Toolkit wi
      * GraphQL
    <br/>
 
-* **New Relic CLI** - The New Relic CLI enables integration of New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
+* **New Relic CLI** - The New Relic CLI enables integration of New Relic into
+  your existing workflows. Be it fetching data from your laptop while
+  troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
 
    * Build on the New Relic Client
    * Initial implementation of
@@ -70,7 +115,9 @@ To solve for the above problems, the initial version of the Developer Toolkit wi
      * Tagging
    <br/>
 
-* **[New Relic AWS CloudFormation Integration](https://github.com/newrelic/cloudformation-partner-integration)** - The AWS CloudFormation Integration enables developers using CloudFormation to easily provision a subset of New Relic resources.
+* **[New Relic AWS CloudFormation Integration](https://github.com/newrelic/cloudformation-partner-integration)**
+  - The AWS CloudFormation Integration enables developers using CloudFormation
+  to easily provision a subset of New Relic resources.
 
    * Build on the NR Client
    * Initial implementation of
@@ -80,17 +127,19 @@ To solve for the above problems, the initial version of the Developer Toolkit wi
 
 ## Milestones
 
-Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/newrelic/projects/6) Project, which will link to each individual tool that is in flight.  Here is the latest summary for planned work by the New Relic team:
+Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/newrelic/projects/6)
+Project, which will link to each individual tool that is in flight.  Here is
+the latest summary for planned work by the New Relic team:
 
-### 2019 Winter
+### 2019 Oct-Dec
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
-| Completed | New Relic Terraform Provider | (Tracked Internally)| The current Terraform Provider for New Relic was created by the community, and was suffering from lack of attention.  Integrate into the Terraform ecosystem, and create a clean base to work from. |
+| Completed | New Relic Terraform Provider | [Updated Release](https://github.com/terraform-providers/terraform-provider-newrelic/releases) | The current Terraform Provider for New Relic was created by the community, and was suffering from lack of attention.  Integrate into the Terraform ecosystem, and create a clean base to work from. |
 | **Current** | New Relic Terraform Provider | [Feature Parity with v2 APIs](https://github.com/terraform-providers/terraform-provider-newrelic/projects/1?card_filter_query=milestone%3A%22feature+parity+with+v2+apis%22) | Enhance the Terraform provider to include all capabilities of the REST v2 API and NerdGraph data access, including configuring Cloud Integrations and Tagging |
 | Next | New Relic Client | [New Relic Client Consolidation](https://github.com/newrelic/newrelic-client-go/projects/1?card_filter_query=milestone%3A%22new+relic+client+consolidation%22) | Currently there is not a consistent, easy to use experience for developing against the New Relic APIs.  As we continue to create new tools, having a consolidated library to build on will act as a force multiplier.  This MMF strives to create a unified client library for consumption by the community, and specifically utilized in the New Relic Terraform Provider. |
 
-### 2020 Spring
+### 2020 Jan-Mar
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
@@ -99,8 +148,13 @@ Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/
 | Planning | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
 | Planning | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
 | Planning | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
+| Planning | Developer Toolkit | **Release** | Initial release of the Developer Toolkit v1.0.0 |
 
-### 2020 Summer
+### Backlog
+
+The following items are possible future work that has not yet been committed or
+scheduled. This list is for the consideration of the community to assist in
+prioritizing, adding to, or removing from scope.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
@@ -108,10 +162,6 @@ Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/
 | Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
 | Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
 | Proposed | Developer Toolkit Docs | Curate Community Docs / Examples | As a community focused project, it is important that we work with the extended community to provide documentation and example workflows. Engaging in this way will drive innovation and ease onboarding for those new to the space. |
-
-### 2020 Fall
-
-| State | Tool | Milestone | Rationale |
-| ----- | ---- | --------- | --------- |
 | Proposed | New Relic Client | Initial Automated Actions | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
 | Proposed | Developer Toolkit | Initial IDE Plugin | Building a plugin for commonly used IDEs enables users to move faster, utilizing the environment that they are already accustomed to. Initial work is to-be-defined, but should include items such as syntax highlighting for the New Relic Terraform Provider and/or CloudFormation Integration |
+
