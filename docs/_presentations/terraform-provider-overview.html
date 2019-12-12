@@ -85,6 +85,32 @@ provider "newrelic" {
 }
 ```
 
+===
+
+### APM
+
+* newrelic_application
+  - APM Application IDs
+* newrelic_key_transaction
+  - Key transaction IDs
+
+---
+
+### APM - Data Sources
+
+```hcl
+data "newrelic_application" "app" {
+  name = "my-app"
+}
+```
+
+
+```hcl
+data "newrelic_key_transaction" "txn" {
+  name = "txn"
+}
+```
+
 
 ===
 
@@ -92,10 +118,10 @@ provider "newrelic" {
 
 * newrelic_alert_policy
   - Defines an Alert Policy
-  - Group one or mor Alert Conditions
+  - Group one or more Alert Conditions
 * newrelic_alert_channel
   - Notification channel for alerts
-  - email, opsgnie, pagerduty, slack, victorops, webhook
+  - email, opsgenie, pagerduty, slack, victorops, webhook
 * newrelic_alert_policy_channel
   - Connect a policy and channel
   - Many-to-Many relationship
@@ -162,7 +188,7 @@ resource "newrelic_alert_policy_channel" "foo" {
 ### Alert Conditions
 
 * newrelic_alert_condition
-  - APM / Metric Alert conditions
+  - apm_app_metric, apm_jvm_metric, apm_kt_metric, browser_metric, mobile_metric
 * newrelic_infra_alert_condition
   - infra_process_running, infra_metric, and infra_host_not_reporting
 * newrelic_nrql_alert_condition
@@ -414,29 +440,6 @@ resource "newrelic_synthetics_alert_condition" "foo" {
   monitor_id  = "${data.newrelic_synthetics_monitor.foo.id}"
   runbook_url = "https://www.example.com"
   enabled     = "true"
-}
-```
-
-===
-
-### Data Sources - Read-Only
-
-* newrelic_application
-* newrelic_key_transaction
-
----
-
-### Data Source - Examples
-
-```hcl
-data "newrelic_application" "app" {
-  name = "my-app"
-}
-```
-
-```hcl
-data "newrelic_key_transaction" "txn" {
-  name = "txn"
 }
 ```
 
