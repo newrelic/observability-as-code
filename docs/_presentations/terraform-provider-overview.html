@@ -1,0 +1,397 @@
+---
+layout: slide
+title: New Relic Provider for Terraform - Overview
+theme: league
+transition: slide
+---
+
+
+<section data-markdown data-separator="^\n===\n$" data-separator-vertical="^\n---\n$" data-element-attributes="{_\s*?([^}]+?)}">
+  <script type="text/template">
+<!-- .slide: class="center" -->
+## New Relic Provider for Terraform
+
+Overview
+
+---
+
+### Revision History
+
+&nbsp;
+
+- Initial build (December 2019)
+
+Full history is availabile via [git history](https://github.com/newrelic/developer-toolkit)
+
+===
+
+### Requirements
+
+&nbsp;
+
+* [New Relic Account](https://one.newrelic.com)
+* New Relic [Admin API key](https://docs.newrelic.com/docs/apis/get-started/intro-apis/types-new-relic-api-keys#admin)
+* [Terraform 0.10+](https://www.terraform.io/intro/getting-started/install.html) (0.12+ Recommended)
+
+===
+
+### New Relic Provider
+
+&nbsp;
+
+* [Open Source project on GitHub](https://github.com/terraform-providers/terraform-provider-newrelic/)
+* Curated by New Relic
+* Covers entire [New Relic REST API (v2)](https://docs.newrelic.com/docs/apis/rest-api-v2/getting-started/introduction-new-relic-rest-api-v2)
+* Terraform Import on all resources
+* [Documentation with Examples](https://www.terraform.io/docs/providers/newrelic/index.html)
+
+---
+
+### Provider - Config
+
+example.tf
+```hcl
+# minimal provider configuration
+
+provider "newrelic" { }
+```
+
+&nbsp;
+
+command line
+```bash
+$ NEWRELIC_API_KEY=asdf terraform init
+```
+
+---
+
+### Provider - Options
+
+example.tf
+```hcl
+provider "newrelic" {
+  api_key = "${var.newrelic_api_key}"
+
+  # Optional, API endpoints (Default to US Region)
+  api_url = ""
+  infra_api_url = ""
+  insights_insert_url  = ""
+
+  # Optional Security
+  insecure_skip_verify = false # or NEWRELIC_API_SKIP_VERIFY
+  cacert_file          = ""    # or NEWRELIC_API_CACERT
+
+  insights_account_id  = ""    # or NEWRELIC_INSIGHTS_ACCOUNT_ID
+  insights_insert_key  = ""    # or NEWRELIC_INSIGHTS_INSERT_KEY
+}
+```
+
+
+===
+
+### Resources - Alerts
+
+* newrelic_alert_policy
+  - Defines an Alert Policy
+  - Group one or mor Alert Conditions
+* newrelic_alert_channel
+  - Notification channel for alerts
+  - email, opsgnie, pagerduty, slack, victorops, webhook
+* newrelic_alert_policy_channel
+  - Connect a policy and channel
+  - Many-to-Many relationship
+
+---
+
+### newrelic_alert_policy
+
+resource:
+```hcl
+resource "newrelic_alert_policy" "foo" {
+  name = "foo"
+
+  # PER_POLICY, PER_CONDITION, or PER_CONDITION_AND_TARGET
+  incident_preference = "PER_POLICY"
+}
+```
+
+data source:
+```hcl
+data "newrelic_alert_policy" "foo" {
+  name = "foo policy"
+}
+```
+
+---
+
+### newrelic_alert_channel
+
+resource:
+```hcl
+resource "newrelic_alert_channel" "foo" {
+  name = "foo"
+  type = "email"
+
+  configuration = {
+    recipients              = "foo@example.com"
+    include_json_attachment = "1"
+  }
+}
+```
+
+data source:
+```hcl
+data "newrelic_alert_channel" "foo" {
+  name = "foo@example.com"
+}
+```
+
+---
+
+### newrelic_alert_policy_channel
+
+resource:
+```hcl
+resource "newrelic_alert_policy_channel" "foo" {
+  policy_id  = "${newrelic_alert_policy.foo.id}"
+  channel_id = "${newrelic_alert_channel.foo.id}"
+}
+```
+
+===
+
+### Resources - Alert Conditions
+
+* newrelic_alert_condition
+  - APM / Metric Alert conditions
+* newrelic_infra_alert_condition
+  - infra_process_running, infra_metric, and infra_host_not_reporting
+* newrelic_nrql_alert_condition
+  - Static and Outlier condition types
+* newrelic_synthetics_alert_condition
+  - Enable/Disable Synthetics monitor alerts
+
+---
+
+### newrelic_alert_condition
+
+resource:
+```hcl
+resource "newrelic_alert_condition" "foo" {
+  policy_id = "${newrelic_alert_policy.foo.id}"
+  name        = "foo"
+  type        = "apm_app_metric"
+  entities    = ["${data.newrelic_application.app.id}"]
+  metric      = "apdex"
+  condition_scope = "application"
+  term {
+    duration      = 5
+    operator      = "below"
+    priority      = "critical"
+    threshold     = "0.75"
+    time_function = "all"
+  }
+}
+```
+
+---
+
+### newrelic_nrql_alert_condition
+
+resource:
+```hcl
+resource "newrelic_nrql_alert_condition" "foo" {
+  policy_id = "${newrelic_alert_policy.foo.id}"
+  name        = "foo"
+  term {
+    duration      = 5
+    operator      = "below"
+    priority      = "critical"
+    threshold     = "1"
+    time_function = "all"
+  }
+  nrql {
+    query       = "SELECT count(*) FROM Transaction"
+    since_value = "3"
+  }
+}
+```
+
+---
+
+### newrelic_infra_alert_condition
+
+resource:
+```hcl
+resource "newrelic_infra_alert_condition" "process_not_running" {
+  policy_id = "${newrelic_alert_policy.foo.id}"
+
+  name             = "Process not running (/usr/bin/ruby)"
+  type             = "infra_process_running"
+  comparison       = "equal"
+  process_where    = "`commandName` = '/usr/bin/ruby'"
+
+  critical {
+    duration      = 5
+    value         = 0
+  }
+}
+```
+
+---
+
+### newrelic_synthetics_alert_condition
+
+resource:
+```hcl
+resource "newrelic_synthetics_alert_condition" "foo" {
+  policy_id = "${newrelic_alert_policy.foo.id}"
+
+  name        = "foo"
+  monitor_id  = "${data.newrelic_synthetics_monitor.foo.id}"
+  runbook_url = "https://www.example.com"
+  enabled     = "true"
+}
+```
+
+===
+
+### Resources - Insights
+
+&nbsp;
+
+* newrelic_dashboard
+  - Manage Insights Dashboards
+* newrelic_insights_event
+  - Insert custom events
+  - Requires Account ID / Insert Key
+
+---
+
+### newrelic_dashboard
+
+resource:
+```hcl
+resource "newrelic_dashboard" "exampledash" {
+  title = "New Relic Terraform Example"
+  editable = "read_only"
+
+  widget {
+    title = "Requests per minute"
+    visualization = "billboard"
+    nrql = "SELECT rate(count(*), 1 minute) FROM Transaction"
+    row = 1
+    column = 1
+  }
+}
+```
+
+
+---
+
+### newrelic_insights_event
+
+resource:
+```hcl
+resource "newrelic_insights_event" "foo" {
+  event {
+    type = "MyEvent"
+
+    attribute {
+      key   = "a_string_attribute"
+      value = "a string"
+    }
+    attribute {
+      key   = "an_integer_attribute"
+      value = 42
+      type  = "int"
+    }
+  }
+}
+
+```
+
+===
+
+### Resources - Synthetics
+
+* newrelic_synthetics_monitor
+  - Manage a Synthetics monitor
+* newrelic_synthetics_monitor_script
+  - Keep scripts in source
+  - Re-use scripts across monitors
+  - Terraform templating
+
+---
+
+### newrelic_synthetics_monitor
+
+resource:
+```hcl
+resource "newrelic_synthetics_monitor" "foo" {
+  name = "foo"
+  type = "SIMPLE"
+  frequency = 5
+  status = "ENABLED"
+  locations = ["AWS_US_EAST_1"]
+}
+```
+
+data source:
+```hcl
+data "newrelic_synthetics_monitor" "bar" {
+  name = "bar"
+}
+```
+
+---
+
+### newrelic_synthetics_monitor_script
+
+resource:
+```hcl
+data "template_file" "foo_script" {
+  template = "${file("${path.module}/foo_script.tpl")}"
+}
+
+resource "newrelic_synthetics_monitor_script" "foo_script" {
+  monitor_id = "${newrelic_synthetics_monitor.foo.id}"
+  text = "${data.template_file.foo_script.rendered}"
+}
+```
+
+===
+
+### Data Sources - Read-Only
+
+* newrelic_application
+* newrelic_key_transaction
+
+---
+
+### Data Source - Examples
+
+```hcl
+data "newrelic_application" "app" {
+  name = "my-app"
+}
+```
+
+```hcl
+data "newrelic_key_transaction" "txn" {
+  name = "txn"
+}
+```
+
+===
+
+### Community
+
+* We are committed to building a [community](https://newrelic.github.io/developer-toolkit/)
+* GitHub Project: [Developer Toolkit](https://github.com/orgs/newrelic/projects/6)
+* Current [Roadmap](https://newrelic.github.io/developer-toolkit/roadmap/) published
+  * Seeking feedback!
+* [Issues](https://github.com/terraform-providers/terraform-provider-newrelic/issues) and [PRs](https://github.com/terraform-providers/terraform-provider-newrelic/pulls) are a great way to start
+
+  </script>
+</section>
