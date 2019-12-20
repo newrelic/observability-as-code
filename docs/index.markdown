@@ -2,10 +2,10 @@
 layout: home
 ---
 
-The New Relic Developer Toolkit is suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
+The New Relic Developer Toolkit is a suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
 * General Resources
-  * [Roadmap](/roadmap/) - Current and future work priorities
+  * [Roadmap](roadmap/) - Current and future work priorities
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
