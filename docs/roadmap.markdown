@@ -6,13 +6,12 @@ permalink: /roadmap/
 
 ## Introduction
 
-This is a community driven project, sponsored by New Relic, to build a
-community around Observability as Code with New Relic. This documentation will
+Welcome to the Developer Toolkit project! This is a community driven effort, sponsored by New Relic, to advance the practice of Observability as Code within our industry and developer community. This documentation will
 define the initial problem space, identify who is impacted and provide a
-roadmap for success.
+roadmap for our success.
 
-### Get Involved
-
+### Get Involved!
+Whether you want to contribute code, have a great idea, or just notice a tpyo, we want to make it possible to share your thoughts and feedback. There are a number of ways we can work together. 
 * [Roadmap RFC](https://discuss.newrelic.com/t/rfc-developer-toolkit-roadmap-2020/90528) -
   We have established a discussion board, as part of our
   [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments) process
@@ -32,11 +31,7 @@ roadmap for success.
 ## Overview
 
 The Developer Toolkit is a set of tools that simplify New Relic configuration
-and management. Enabling developers to implement Observability as Code through
-industry standard frameworks such as Terraform and CloudFormation, or integrate
-into their existing workflow with the New Relic CLI. For those who require
-fine-grained control, the New Relic Client takes all of the guesswork out of
-directly using New Relic APIs.
+and management, accelerating the ability for developers to implement DevOps best practicies. We've started by building around common open source tools and frameworks such as Terraform and CloudFormation, to simplify integrating observability into automation workflows. As a developer, you have complete control through the New Relic Client.
 
 
 ## Personas
