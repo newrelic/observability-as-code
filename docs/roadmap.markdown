@@ -13,16 +13,18 @@ roadmap for success.
 
 ### Get Involved
 
-In the future, we will establish a [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments) process
-as the channel for driving this roadmap. Currently, we are using GitHub to
-communicate with the community and represent a source of truth. Please use the
-following tools to contribute:
-
+* [Roadmap RFC](https://discuss.newrelic.com/t/rfc-developer-toolkit-roadmap-2020/90528) -
+  We have established a discussion board, as part of our
+  [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments) process
+  for driving this roadmap.
+* [Discussion Forum](https://discuss.newrelic.com/c/build-on-new-relic/developer-toolkit) -
+  Ask questions about tools within the Developer Toolkit, or help answer
+  questions from feloow community members.
 * [Issues](https://github.com/newrelic/developer-toolkit/issues) - The
   easiest way to get involved is to identify a need, and report it as an issue
   on this GitHub repo.
 * [Pull Requests](https://github.com/newrelic/developer-toolkit/pulls) - Want
-  to directly contribue? Open a PR to add some documentation, fix a grammatical
+  to directly contribute? Open a PR to add some documentation, fix a grammatical
   error, or add a feature to the backlog. Community review of PRs in-flight are
   also more than welcome!
 
