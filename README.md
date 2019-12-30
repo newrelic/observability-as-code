@@ -2,6 +2,12 @@
 
 The New Relic Developer Toolkit is a suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
+> **Request for Comments!**
+>
+> We've recently published our [Roadmap](https://newrelic.github.io/developer-toolkit/roadmap/) and have sumbitted this to the community for review. If you have any questions or comments, please contribute to the thread in our [discussion forum](https://discuss.newrelic.com/c/build-on-new-relic/developer-toolkit).
+
+
+
 * General Resources
   * [Project Website](https://newrelic.github.io/developer-toolkit/) - Main source of information about the Developer Toolkit
   * [Roadmap](https://newrelic.github.io/developer-toolkit/roadmap/) - Current and future work priorities
@@ -60,6 +66,10 @@ The AWS CloudFormation Integration enables developers using CloudFormation to ea
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
 https://discuss.newrelic.com/c/build-on-new-relic/
+
+The link for the Developer Toolkit discussion can be found here:
+
+https://discuss.newrelic.com/c/build-on-new-relic/developer-toolkit
 
 
 ### Issues or Enhancement Requests
