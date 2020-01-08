@@ -9,7 +9,7 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
-  * [New Relic API Client](#new-relic-api-client)
+  * [New Relic Client](#new-relic-client)
   * [New Relic CLI](#new-relic-cli)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
 * Support
@@ -34,9 +34,9 @@ The New Relic Terraform Provider enables Observability as Code, reducing develop
 
 The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
 
-* Documentation
-* Repo
-* Project Boards
+* [Documentation](https://godoc.org/github.com/newrelic/newrelic-client-go)
+* [Repo](https://github.com/newrelic/newrelic-client-go)
+* [Project Boards](https://github.com/newrelic/newrelic-client-go/projects)
 
 
 #### New Relic CLI
