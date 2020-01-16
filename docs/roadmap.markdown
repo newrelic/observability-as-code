@@ -96,10 +96,10 @@ Source projects, and actively engage with the broader community.
   applications.
 
    * Full support for the following New Relic API endpoints:
+     * GraphQL
      * APM REST v2 API
      * Infrastructure API
      * Synthetics API
-     * GraphQL
    <br/>
 
 * **New Relic CLI** - The New Relic CLI enables integration of New Relic into
@@ -134,7 +134,7 @@ the latest summary for planned work by the New Relic team:
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | **Current** | New Relic Client | [GraphQL Support](https://github.com/newrelic/newrelic-client-go/projects/1?card_filter_query=milestone%3A%22graphql+support%22) | NerdGraph, New Relic's implementation of GraphQL, is the future platform for all API requests and is the backing solution for New Relic One. As such, the NR Client needs to implement GraphQL to support any additional data. |
-| Next | New Relic Terraform Provider | Provider 2.0 | In order to add some newer features to the New Relic Terraform Provider, we need to implement some breaking changes which warrants a major version change. |
+| Next | New Relic Terraform Provider | Provider on NR Client | After consolidating and improving the backing libraries for communicating with New Relic into the [New Relic Client](https://github.com/newrelic/newrelic-client-go). Port the Terraform provider to use the New Relic Client instead of the existing libraries. |
 | Planning | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
 | Planning | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
 | Planning | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
