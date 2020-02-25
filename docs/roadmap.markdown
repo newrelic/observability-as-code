@@ -102,7 +102,7 @@ Source projects, and actively engage with the broader community.
      * Synthetics API
    <br/>
 
-* **New Relic CLI** - The New Relic CLI enables integration of New Relic into
+* **[New Relic CLI](https://github.com/newrelic/newrelic-cli)** - The New Relic CLI enables integration of New Relic into
   your existing workflows. Be it fetching data from your laptop while
   troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
 
@@ -112,7 +112,7 @@ Source projects, and actively engage with the broader community.
      * Tagging
    <br/>
 
-* **[New Relic AWS CloudFormation Integration](https://github.com/newrelic/cloudformation-partner-integration)**
+* **New Relic AWS CloudFormation Integration**
   - The AWS CloudFormation Integration enables developers using CloudFormation
   to easily provision a subset of New Relic resources.
 
@@ -125,29 +125,53 @@ Source projects, and actively engage with the broader community.
 ## Milestones
 
 Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/newrelic/projects/6)
-Project, which will link to each individual tool that is in flight.  Here is
+project, which contains overview and details status for each individual tool that is in flight.  Here is
 the latest summary for planned work by the New Relic team:
 
 
 ### 2020 Jan-Mar
 
+Work this quarter focuses on the basic establishment of the Toolkit for a
+initial v1 release. The v1 release will contain the four tools listed above,
+and specifically target usecases in this roadmap document.
+
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | Completed | New Relic Terraform Provider | Provider on NR Client | After consolidating and improving the backing libraries for communicating with New Relic into the [New Relic Client](https://github.com/newrelic/newrelic-client-go). Port the Terraform provider to use the New Relic Client instead of the existing libraries. |
-| **Current** | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
-| Planning | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
+| Completed | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
+| **Current** | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
 | Planning | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
 | Planning | Developer Toolkit | **Release** | Initial release of the Developer Toolkit v1.0.0 |
 
+
 ### 2020 Apr-Jun
+
+Following on the release of the Developer Toolkit v1, the focus is on
+improving ease of adoption and increasing the depth of coverage for the tools.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
-| Proposed | New Relic Client | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
+| Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
+| Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchistration tooling. |
+| Proposed | New Relic CLI | Plugin Architecture | The CLI is intended to provide a single entry point into automation and scripting of New Relic. Adding support for a plugin architecture allows for additional teams to easily work on adding new features to the CLI. This is most notable for managing the Nerdpack lifecycle. Transition plan for migration of users should also come out of this. |
 | Proposed | New Relic Client | Insights | Migrate the [go-insights](https://github.com/newrelic/go-insights) package into the New Relic Client |
-| Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
+| Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
 | Proposed | Developer Toolkit Docs | Curate Community Docs / Examples | As a community focused project, it is important that we work with the extended community to provide documentation and example workflows. Engaging in this way will drive innovation and ease onboarding for those new to the space. |
 
+### 2020 Jul-Sep
+
+Work towards increasing effeciencies in how the team operates, and drive
+consistency in the tools that are being delivered. This area is a bit more
+ambiguous, and priorities / order is yet to be confirmed.
+
+| State | Tool | Milestone | Rationale |
+| ----- | ---- | --------- | --------- |
+| Proposed | New Relic CLI | Plugin Service | In order to have a first-class plugin experience, we need to have a curated way to provide plugins to end-users in an automated way. Creating the pipeline for delivering plugins is a critical component in this initiative. |
+| Proposed | Genero | Exploring Code Gen | As the number of orchistration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
+| Proposed | New Relic CLI | NR1 Plugin | In the effort to consolidate command line interfaces into a consistent and easy user experience, we will initially adopt the current nr1 CLI as a plugin. |
+| Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
+| Proposed | New Relic Kubernetes Operator | Initial Support k8s | Kubernetes has become the defacto standard for containerized services. Custom operators allow configuration of third-party services within the the kubernetes so your monitoring definition is tightly coupled to the deployment, simplifying overall configuration. |
+| Proposed | Automated Actions | Initial work | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
 
 ### Backlog
 
@@ -157,16 +181,4 @@ prioritizing, adding to, or removing from scope.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
-| Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
-| Proposed | New Relic Client | Initial Automated Actions | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
 | Proposed | Developer Toolkit | Initial IDE Plugin | Building a plugin for commonly used IDEs enables users to move faster, utilizing the environment that they are already accustomed to. Initial work is to-be-defined, but should include items such as syntax highlighting for the New Relic Terraform Provider and/or CloudFormation Integration |
-
-
-### Recently Completed
-
-| State | Tool | Milestone | Rationale |
-| ----- | ---- | --------- | --------- |
-| Completed | New Relic Terraform Provider | [Updated Release](https://github.com/terraform-providers/terraform-provider-newrelic/releases) | The current Terraform Provider for New Relic was created by the community, and was suffering from lack of attention.  Integrate into the Terraform ecosystem, and create a clean base to work from. |
-| Completed | New Relic Terraform Provider | [Feature Parity with v2 APIs](https://github.com/terraform-providers/terraform-provider-newrelic/projects/1?card_filter_query=milestone%3A%22feature+parity+with+v2+apis%22) | Enhance the Terraform provider to include all capabilities of the REST v2 API and NerdGraph data access, including configuring Cloud Integrations and Tagging |
-| Completed | New Relic Client | [New Relic Client Consolidation](https://github.com/newrelic/newrelic-client-go/projects/1?card_filter_query=milestone%3A%22new+relic+client+consolidation%22) | Currently there is not a consistent, easy to use experience for developing against the New Relic APIs.  As we continue to create new tools, having a consolidated library to build on will act as a force multiplier.  This MMF strives to create a unified client library for consumption by the community, and specifically utilized in the New Relic Terraform Provider. |
-| Completed | New Relic Client | [GraphQL Support](https://github.com/newrelic/newrelic-client-go/projects/1?card_filter_query=milestone%3A%22graphql+support%22) | NerdGraph, New Relic's implementation of GraphQL, is the future platform for all API requests and is the backing solution for New Relic One. As such, the NR Client needs to implement GraphQL to support any additional data. |
