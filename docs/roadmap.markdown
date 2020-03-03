@@ -152,7 +152,7 @@ improving ease of adoption and increasing the depth of coverage for the tools.
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
-| Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchistration tooling. |
+| Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchestration tooling. |
 | Proposed | New Relic CLI | Plugin Architecture | The CLI is intended to provide a single entry point into automation and scripting of New Relic. Adding support for a plugin architecture allows for additional teams to easily work on adding new features to the CLI. This is most notable for managing the Nerdpack lifecycle. Transition plan for migration of users should also come out of this. |
 | Proposed | New Relic Client | Insights | Migrate the [go-insights](https://github.com/newrelic/go-insights) package into the New Relic Client |
 | Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
