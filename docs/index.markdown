@@ -5,6 +5,7 @@ layout: home
 The New Relic Developer Toolkit is a suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
 * General Resources
+  * [New Relic Developer Resources](https://developer.newrelic.com)
   * [Roadmap](roadmap/) - Current and future work priorities
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
 * Tools in the Toolkit
@@ -27,7 +28,6 @@ The New Relic Terraform Provider enables Observability as Code, reducing develop
 
 * [Documentation](https://www.terraform.io/docs/providers/newrelic/index.html)
 * [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/)
-* [Project boards](https://github.com/terraform-providers/terraform-provider-newrelic/projects)
 
 
 #### New Relic Client
@@ -36,16 +36,16 @@ The New Relic Client provides the building blocks for many tools in the toolkit,
 
 * [Documentation](https://godoc.org/github.com/newrelic/newrelic-client-go)
 * [Repo](https://github.com/newrelic/newrelic-client-go)
-* [Project Boards](https://github.com/newrelic/newrelic-client-go/projects)
 
 
 #### New Relic CLI
 
 The New Relic CLI enables integration of New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
 
-* Documentation
-* Repo
-* Project Boards
+* [Documentation](https://github.com/newrelic/newrelic-cli)
+* [Repo](https://github.com/newrelic/newrelic-cli)
+* [Docker Image](https://hub.docker.com/r/newrelic/cli)
+
 
 #### New Relic AWS CloudFormation Integration
 
@@ -53,14 +53,13 @@ The AWS CloudFormation Integration enables developers using CloudFormation to ea
 
 * [Documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration)
 * [Repo](https://github.com/newrelic/cloudformation-partner-integration)
-* [Project Boards](https://github.com/newrelic/cloudformation-partner-integration/projects)
 
 
 ## Community
 
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
-https://discuss.newrelic.com/c/build-on-new-relic/
+https://discuss.newrelic.com/c/build-on-new-relic/developer-toolkit
 
 
 ### Issues or Enhancement Requests
