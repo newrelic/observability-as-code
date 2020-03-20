@@ -50,10 +50,10 @@ when they do not operate in a similar way, so SREs strive to develop easy to
 follow standards.
 
 **Security Engineer** - A Security Engineer is someone responsible for auditing
-and verify compliance of their software.  In order to facilitate this, New
-Relic has been made a requirement for all services, and as such needs specific
-tagging and configuration across all assets.  When faced with any reasonable
-sized organization this becomes a daunting task.
+and verifying compliance of their software. In order to facilitate this, New Relic
+has been made a requirement for all services, and as such needs specific tagging
+and configuration across all assets. When faced with any reasonable sized
+organization this becomes a daunting task.
 
 
 ## Job Stories
@@ -112,7 +112,7 @@ Source projects, and actively engage with the broader community.
      * Tagging
    <br/>
 
-* **New Relic AWS CloudFormation Integration**
+* **[New Relic AWS CloudFormation Integration](https://github.com/newrelic/cloudformation-partner-integration)**
   - The AWS CloudFormation Integration enables developers using CloudFormation
   to easily provision a subset of New Relic resources.
 
@@ -139,8 +139,9 @@ and specifically target usecases in this roadmap document.
 | ----- | ---- | --------- | --------- |
 | Completed | New Relic Terraform Provider | Provider on NR Client | After consolidating and improving the backing libraries for communicating with New Relic into the [New Relic Client](https://github.com/newrelic/newrelic-client-go). Port the Terraform provider to use the New Relic Client instead of the existing libraries. |
 | Completed | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
-| **Current** | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
-| Planning | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
+| Completed | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
+| Completed | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
+| **current** | New Relic Client | As New Relic builds features on top of NerdGraph, we should enable migration away from the legacy REST APIs toward the Unified API.  We have the building blocks in place to make arbitrary queries to NerdGraph, and we have the schemas required to change from REST to GraphQL. |
 | Planning | Developer Toolkit | **Release** | Initial release of the Developer Toolkit v1.0.0 |
 
 

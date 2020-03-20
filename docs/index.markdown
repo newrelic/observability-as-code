@@ -10,8 +10,8 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
-  * [New Relic Client](#new-relic-client)
   * [New Relic CLI](#new-relic-cli)
+  * [New Relic Client](#new-relic-client)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
 * Support
   * [Helpful Links](#helpful-links)
@@ -28,15 +28,7 @@ The New Relic Terraform Provider enables Observability as Code, reducing develop
 
 * [Documentation](https://www.terraform.io/docs/providers/newrelic/index.html)
 * [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/)
-
-
-#### New Relic Client
-
-The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
-
-* [Documentation](https://godoc.org/github.com/newrelic/newrelic-client-go)
-* [Repo](https://github.com/newrelic/newrelic-client-go)
-
+* [Terraform Module for New Relic APM](https://registry.terraform.io/modules/newrelic/apm/newrelic/)
 
 #### New Relic CLI
 
@@ -45,6 +37,14 @@ The New Relic CLI enables integration of New Relic into your existing workflows.
 * [Documentation](https://github.com/newrelic/newrelic-cli)
 * [Repo](https://github.com/newrelic/newrelic-cli)
 * [Docker Image](https://hub.docker.com/r/newrelic/cli)
+
+
+#### New Relic Client
+
+The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
+
+* [Documentation](https://godoc.org/github.com/newrelic/newrelic-client-go)
+* [Repo](https://github.com/newrelic/newrelic-client-go)
 
 
 #### New Relic AWS CloudFormation Integration
