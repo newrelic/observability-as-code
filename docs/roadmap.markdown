@@ -142,7 +142,8 @@ and specifically target usecases in this roadmap document.
 | Completed | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
 | Completed | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
 | **current** | New Relic Client | NerdGraph Support | As New Relic builds features on top of NerdGraph, we should enable migration away from the legacy REST APIs toward the Unified API.  We have the building blocks in place to make arbitrary queries to NerdGraph, and we have the schemas required to change from REST to GraphQL. |
-| Planning | Developer Toolkit | **Release** | Initial release of the Developer Toolkit v1.0.0 |
+
+#### Initial release of the Developer Toolkit v1
 
 
 ### 2020 Apr-Jun
@@ -153,10 +154,9 @@ improving ease of adoption and increasing the depth of coverage for the tools.
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
-| Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchestration tooling. |
 | Proposed | New Relic CLI | Plugin Architecture | The CLI is intended to provide a single entry point into automation and scripting of New Relic. Adding support for a plugin architecture allows for additional teams to easily work on adding new features to the CLI. This is most notable for managing the Nerdpack lifecycle. Transition plan for migration of users should also come out of this. |
-| Proposed | New Relic Client | Insights | Migrate the [go-insights](https://github.com/newrelic/go-insights) package into the New Relic Client |
 | Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
+| Proposed | New Relic Client | Insights | Migrate the [go-insights](https://github.com/newrelic/go-insights) package into the New Relic Client |
 | Proposed | Developer Toolkit Docs | Curate Community Docs / Examples | As a community focused project, it is important that we work with the extended community to provide documentation and example workflows. Engaging in this way will drive innovation and ease onboarding for those new to the space. |
 
 ### 2020 Jul-Sep
@@ -168,11 +168,11 @@ ambiguous, and priorities / order is yet to be confirmed.
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | Proposed | New Relic CLI | Plugin Service | In order to have a first-class plugin experience, we need to have a curated way to provide plugins to end-users in an automated way. Creating the pipeline for delivering plugins is a critical component in this initiative. |
-| Proposed | Genero | Exploring Code Gen | As the number of orchistration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
 | Proposed | New Relic CLI | NR1 Plugin | In the effort to consolidate command line interfaces into a consistent and easy user experience, we will initially adopt the current nr1 CLI as a plugin. |
 | Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
 | Proposed | New Relic Kubernetes Operator | Initial Support k8s | Kubernetes has become the defacto standard for containerized services. Custom operators allow configuration of third-party services within the the kubernetes so your monitoring definition is tightly coupled to the deployment, simplifying overall configuration. |
 | Proposed | Automated Actions | Initial work | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
+| Proposed | Genero | Code Gen | As the number of orchistration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
 
 ### Backlog
 
@@ -182,4 +182,5 @@ prioritizing, adding to, or removing from scope.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
+| Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchestration tooling. |
 | Proposed | Developer Toolkit | Initial IDE Plugin | Building a plugin for commonly used IDEs enables users to move faster, utilizing the environment that they are already accustomed to. Initial work is to-be-defined, but should include items such as syntax highlighting for the New Relic Terraform Provider and/or CloudFormation Integration |
