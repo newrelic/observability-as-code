@@ -115,5 +115,5 @@ cd docs/
 
 bundle install
 
-bundle exec jekyell serve
+bundle exec jekyll serve
 ```
