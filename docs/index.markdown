@@ -5,6 +5,7 @@ layout: home
 The New Relic Developer Toolkit is a suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.  This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
 * General Resources
+  * [Getting Started Guides](#getting-started)
   * [New Relic Developer Resources](https://developer.newrelic.com)
   * [Roadmap](roadmap/) - Current and future work priorities
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
@@ -25,6 +26,8 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
 Ready to jump right in? Excellent! Here are some quick reference guides to
 assist you in your journey to increased consistency and decreased toil:
 
+> Further information is available on New Relic's [Developer](https://developer.newrelic.com/use-cases/workflow-automation) site.
+
 * [New Relic Terraform Provider](#new-relic-terraform-provider)
   * [Quick Start Video](https://www.youtube.com/watch?v=UwJ-7BLylJo) - Walk through how to configure New Relic via Terraform in just a few minutes.
   * [Getting Started Guide](https://www.terraform.io/docs/providers/newrelic/guides/getting_started.html) - Easy to follow example to get you started.
@@ -35,6 +38,7 @@ assist you in your journey to increased consistency and decreased toil:
   * [Example usage](https://github.com/newrelic/newrelic-client-go#example) - Quick overview of importing this library into your own application.
 * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
   * [Documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration) - Get up and running with New Relic + CloudFormation for NRQL Alerting
+
 
 ## Tools in the Toolkit
 
