@@ -20,6 +20,22 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [Contributing](#contributing)
   * [Open Source License](#open-source-license)
 
+## Getting Started
+
+Ready to jump right in? Excellent! Here are some quick reference guides to
+assist you in your journey to increased consistency and decreased toil:
+
+* [New Relic Terraform Provider](#new-relic-terraform-provider)
+  * [Quick Start Video](https://www.youtube.com/watch?v=UwJ-7BLylJo) - Walk through how to configure New Relic via Terraform in just a few minutes.
+  * [Getting Started Guide](https://www.terraform.io/docs/providers/newrelic/guides/getting_started.html) - Easy to follow example to get you started.
+* [New Relic CLI](#new-relic-cli)
+  * [Quick Start Video]() - Overview of the key features the New Relic CLI provides (Spoiler: Deployment Markers, Tag Management, and more!)
+  * [Getting Started Guide](https://github.com/newrelic/newrelic-cli/blob/master/docs/GETTING_STARTED.md) - For the quick copy/pasters out there. Get started ASAP.
+* [New Relic Client](#new-relic-client)
+  * [Example usage](https://github.com/newrelic/newrelic-client-go#example) - Quick overview of importing this library into your own application.
+* [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
+  * [Documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration) - Get up and running with New Relic + CloudFormation for NRQL Alerting
+
 ## Tools in the Toolkit
 
 #### New Relic Terraform Provider
@@ -43,7 +59,7 @@ The New Relic CLI enables integration of New Relic into your existing workflows.
 
 The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs.  As a library, it can also be leveraged within your own custom applications.
 
-* [Documentation](https://godoc.org/github.com/newrelic/newrelic-client-go)
+* [Documentation](https://pkg.go.dev/github.com/newrelic/newrelic-client-go)
 * [Repo](https://github.com/newrelic/newrelic-client-go)
 
 
