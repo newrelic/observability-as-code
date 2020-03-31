@@ -26,7 +26,7 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
 Ready to jump right in? Excellent! Here are some quick reference guides to
 assist you in your journey to increased consistency and decreased toil:
 
-> Further information is available on New Relic's [Developer](https://developer.newrelic.com/use-cases/workflow-automation) site.
+> For more information on the toolkit and explore other programmability capabilities for New Relic One, check out our [developer](https://developer.newrelic.com/use-cases/workflow-automation) site.
 
 * [New Relic Terraform Provider](#new-relic-terraform-provider)
   * [Quick Start Video](https://www.youtube.com/watch?v=UwJ-7BLylJo) - Walk through how to configure New Relic via Terraform in just a few minutes.
