@@ -6,8 +6,6 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
 >
 > We've recently published our [Roadmap](https://newrelic.github.io/developer-toolkit/roadmap/) and have sumbitted this to the community for review. If you have any questions or comments, please contribute to the thread in our [discussion forum](https://discuss.newrelic.com/c/build-on-new-relic/developer-toolkit).
 
-
-
 * General Resources
   * [Project Website](https://newrelic.github.io/developer-toolkit/) - Main source of information about the Developer Toolkit
   * [Roadmap](https://newrelic.github.io/developer-toolkit/roadmap/) - Current and future work priorities
@@ -23,6 +21,22 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [Issues or Enhancement Requests](#issues-or-enhancement-requests)
   * [Contributing](#contributing)
   * [Open Source License](#open-source-license)
+
+## Getting Started
+
+Ready to jump right in? Excellent! Here are some quick reference guides to
+assist you in your journey to increased consistency and decreased toil:
+
+* [New Relic Terraform Provider](#new-relic-terraform-provider)
+  * [Quick Start Video](https://www.youtube.com/watch?v=UwJ-7BLylJo) - Walk through how to configure New Relic via Terraform in just a few minutes.
+  * [Getting Started Guide](https://www.terraform.io/docs/providers/newrelic/guides/getting_started.html) - Easy to follow example to get you started.
+* [New Relic CLI](#new-relic-cli)
+  * [Quick Start Video]() - Overview of the key features the New Relic CLI provides (Spoiler: Deployment Markers, Tag Management, and more!)
+  * [Getting Started Guide](https://github.com/newrelic/newrelic-cli/blob/master/docs/GETTING_STARTED.md) - For the quick copy/pasters out there. Get started ASAP.
+* [New Relic Client](#new-relic-client)
+  * [Example usage](https://github.com/newrelic/newrelic-client-go#example) - Quick overview of importing this library into your own application.
+* [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
+  * [Documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudformation-integration) - Get up and running with New Relic + CloudFormation for NRQL Alerting
 
 ## Tools in the Toolkit
 
