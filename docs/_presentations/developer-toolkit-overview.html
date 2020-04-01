@@ -1,0 +1,223 @@
+---
+layout: slide
+title: Developer Toolkit - Overview
+theme: league
+transition: slide
+date: 2020-04-01
+---
+
+<section data-markdown data-separator="^\n===\n$" data-separator-vertical="^\n---\n$" data-element-attributes="{_\s*?([^}]+?)}">
+  <script type="text/template">
+<!-- .slide: class="center" -->
+# Developer Toolkit
+
+### Overview
+
+---
+
+#### Revision History
+
+&nbsp;
+
+- Initial build (April 2020)
+
+Full history is availabile via [git history](https://github.com/newrelic/developer-toolkit)
+
+===
+
+## What is the Developer Toolkit?
+
+&nbsp;
+
+<small>
+The Developer Toolkit is a suite of tools that simplify New Relic configuration and management, accelerating the ability for developers to implement DevOps best practices. We've started by building around common open source tools and frameworks such as Terraform and CloudFormation, to simplify integrating observability into automation workflows. As a developer, you have complete control through the New Relic Client.
+</small>
+
+===
+
+### Vision
+
+&nbsp;
+
+As an indispensable partner on the journey toward a more perfect internet, The Developer Toolkit team will embody the “observability as code” point of view by providing open-source tooling that enables users to deeply weave New Relic throughout their DevOps workflows.
+
+---
+
+### Charter
+
+&nbsp;
+
+<small>
+ <ul>
+  <li>As <em>curators</em> of developer tooling, we will facilitate the open sourcing of community-facing tools and amplify their value as a cohesive set of integration points with the platform.
+  <li>As <em>consolidators</em> of developer tooling, the team will lay the foundation for bringing the currently scattered universe of developer tools under a single, officially supported offering.
+  <li>As <em>members</em> of the developer community, we will foster an inclusive environment for the growth of our fellow members, and together work to reduce toil.
+ </ul>
+</small>
+
+===
+
+## Who is the Audience?
+
+<small>
+ <ul>
+  <li><em>Software Engineer</em> - A software engineer is someone who is writing, deploying, and managing the lifecycle of any software stack that utilizes New Relic. As the owner of the application, they are responsible for managing all Alerts, Dashboards, Nerdpacks, and other New Relic resources specific to their application.
+  <li><em>Site Reliability Engineer</em> - A Site Reliability Engineer (SRE) is an individual who is responsible for the stability of the entire software stack. They assist Software Engineers with proper New Relic configuration, and provide overall guidance across teams. Working with multiple teams becomes difficult when they do not operate in a similar way, so SREs strive to develop easy to follow standards.
+  <li><em>Security Engineer</em> - A Security Engineer is someone responsible for auditing and verifying compliance of their software. In order to facilitate this, New Relic has been made a requirement for all services, and as such needs specific tagging and configuration across all assets. When faced with any reasonable sized organization this becomes a daunting task.
+ </ul>
+<small>
+
+---
+
+### Job Stories
+
+<small>
+ <ul>
+  <li>When I deploy a service, I want to embed the New Relic configuration in code with the rest of the service definition
+  <li>When I audit our systems, I want an easy way to verify the New Relic configuration is defined as expected
+  <li>When I deploy an application, I want to record the deployment in New Relic without having to learn how their API works
+  <li>When service ownership changes, I want an easily automated way to change tags within New Relic
+  <li>When I have custom tooling in place that I want to leverage New Relic, I want to be able to use a supported library
+  <li>When I build a deployment pipeline using serverless functions, I want to include New Relic
+ </ul>
+</small>
+
+===
+
+<!-- .slide: class="center" -->
+
+# Toolkit Today
+
+---
+
+### New Relic Terraform Provider
+
+> The New Relic Terraform Provider enables Observability as Code, reduces developer toil, and allows users to manage their entire ecosystem in a single place.
+
+* Built on the New Relic Client
+* Full implementation of APIs available through the New Relic Client
+
+---
+
+### New Relic CLI
+<small>
+The New Relic CLI enables integration of New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
+</small>
+
+* Build on the New Relic Client
+* Initial implementation includes:
+  * Deployment Markers
+  * Tag management
+  * Entity Querying
+  * Custom GraphQL query support
+
+---
+
+### New Relic AWS CloudFormation Integration
+
+<small>
+The AWS CloudFormation Integration enables developers using CloudFormation to easily provision a subset of New Relic resources.
+</small>
+
+&nbsp;
+
+* Initial implementation includes:
+  * Basic NRQL Alert configuration
+
+---
+
+### New Relic Client
+
+<small>
+The New Relic Client provides the building blocks for many tools in the toolkit, enabling quick access to the suite of New Relic APIs. As a library, it can also be leveraged within your own custom applications.
+</small>
+
+&nbsp;
+
+* Supports the following New Relic API endpoints:
+  * NerdGraph
+  * APM REST v2 API
+  * Infrastructure REST API
+  * Synthetics REST API
+
+===
+
+<!-- .slide: class="center" -->
+
+# Open Source
+
+---
+
+### Why build in Open Source?
+
+&nbsp;
+
+<small>
+ <ul>
+  <li><em>Visibility</em> - Working in the open ensures full transparency to the direction we are going, including priority order.
+  <li><em>Community</em> - While we have a lot of data on what we believe the community needs, running projects <i>in</i> the community provides clarity and innovative solutions.
+  <li><em>Safety</em> - Folks looking for innovative solutions to solve their toil often turn to Open Source. Providing curated Open Source projects allows easy adoption while ensuring ongoing care and feeding of the solution.
+ </ul>
+</small>
+
+---
+
+### Success
+
+<small>
+ <ul>
+  <li>
+   GitHub Stats (all projects, as of 4/1/2020)
+   <table>
+   <tr><th>Contributors</th><td>58</td></tr>
+   <tr><th>Stars</th><td>73</td></tr>
+   <tr><th>Forks</th><td>94</td></tr>
+   <tr><th>Issues Reported</th><td>298</td></tr>
+   <tr><th>Issues Closed</th><td>252</td></tr>
+   <tr><th>PRs Submitted</th><td>612</td></tr>
+   <tr><th>PRs Closed</th><td>603</td></tr>
+   </table>
+  <li>
+   Innovative ideas to improve the platform
+   <ul>
+    <li><a href='https://github.com/terraform-providers/terraform-provider-newrelic/issues/493'>Network / IP Data Source</a>
+   </ul>
+  </li>
+  <li>Folks leveraging newrelic-client-go
+   <ul>
+    <li>Kubernetes Operator work in progress
+   </ul>
+  </li>
+ </ul>
+</small>
+
+---
+
+### Room for Improvement
+
+&nbsp;
+
+<small>
+ <ul>
+  <li>Limited visibility
+   <ul><li>Folks often surprised we / tools exist
+    <li>Having trouble gaining traction
+   </ul>
+  </li>
+  <li>Community Engagement
+   <ul>
+    <li>Inconsisten contribution flow
+    <li>Issues and PRs are great
+    <li>Roadmap discussions would be better
+   </ul>
+  </li>
+  <li>Building champions
+   <ul>
+    <li>Yet to identify anyone advocting on our behalf (externally)
+   </ul>
+  </li>
+ </ul>
+</small>
+
+  </script>
+</section>
