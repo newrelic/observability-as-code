@@ -96,6 +96,10 @@ body {
 .reveal em {
   font-style: italic; }
 
+.reveal li {
+  margin-bottom: 0.4em;
+}
+
 .reveal ol,
 .reveal dl,
 .reveal ul {
@@ -131,7 +135,7 @@ body {
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 70%;
+  width: 80%;
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
