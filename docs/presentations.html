@@ -6,7 +6,7 @@ permalink: /presentations/
 <div class="home">
   <h1 class="page-heading">Presentations</h1>
   <ul class="post-list">
-    {% for post in site.presentations %}
+    {% for post in site.presentations reversed %}
       <li>
         <span class="post-meta">{{ post.date  | date: "%b %-d, %Y" }}
         <h2>
