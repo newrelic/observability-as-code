@@ -133,23 +133,6 @@ project, which contains overview and details status for each individual tool tha
 the latest summary for planned work by the New Relic team:
 
 
-### 2020 Jan-Mar
-
-Work this quarter focuses on the basic establishment of the Toolkit for a
-initial v1 release. The v1 release will contain the four tools listed above,
-and specifically target usecases in this roadmap document.
-
-| State | Tool | Milestone | Rationale |
-| ----- | ---- | --------- | --------- |
-| Completed | New Relic Terraform Provider | Provider on NR Client | After consolidating and improving the backing libraries for communicating with New Relic into the [New Relic Client](https://github.com/newrelic/newrelic-client-go). Port the Terraform provider to use the New Relic Client instead of the existing libraries. |
-| Completed | New Relic CLI | Initial Support | Community members with existing workflows want to be able to leverage command line tooling to interact with New Relic. Leveraging the New Relic Client, we can build a CLI to simplify user interactions for both scripted and interactive workflows. |
-| Completed | CloudFormation | Initial Support | New Relic has released a minimal Partner integration for CloudFormation specifically covering NRQL Alerting. We will evaluate if reproducing this using the New Relic Client Library would allow adding support quickly for other resources to enable feature parity with our Terraform Provider. |
-| Completed | Developer Toolkit Docs | Enhanced Docs and Examples | The Developer Toolkit as a collection of tools that are extremely useful; however, spreading the documentation across multiple repositories in various levels of detail increases friction.  We will create a consolidated collection of examples and documentation for tools, including when it is appropriate to use a specific tool vs another. |
-| **current** | Client and Terraform | NerdGraph Support | As New Relic builds features on top of NerdGraph, we should enable migration away from the legacy REST APIs toward the Unified API.  We have the building blocks in place to make arbitrary queries to NerdGraph, and we have the schemas required to change from REST to GraphQL. |
-
-#### Initial release of the Developer Toolkit v1
-
-
 ### 2020 Apr-Jun
 
 Following on the release of the Developer Toolkit v1, the focus is on
@@ -157,7 +140,7 @@ improving ease of adoption and increasing the depth of coverage for the tools.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
-| Proposed | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
+| **current** | New Relic CLI | Streamlined Installation | Enabling easy installation and upgrades of the NR CLI in existing workflows provides a streamlined experience for the user.  This should include installation through well-known package managers for supported platforms, so maintenance of the CLI fits into existing user practices. |
 | Proposed | New Relic CLI | Plugin Architecture | The CLI is intended to provide a single entry point into automation and scripting of New Relic. Adding support for a plugin architecture allows for additional teams to easily work on adding new features to the CLI. This is most notable for managing the Nerdpack lifecycle. Transition plan for migration of users should also come out of this. |
 | Proposed | New Relic Kubernetes Operator | Initial Support k8s | Kubernetes has become the defacto standard for containerized services. Custom operators allow configuration of third-party services within the the kubernetes so your monitoring definition is tightly coupled to the deployment, simplifying overall configuration. |
 | Proposed | New Relic Terraform Provider | 2.0 Beta | In order to start migrating more usage from the legacy REST APIs to NerdGraph, there are a few breaking changes that need to happen.  This will lay all the groundwork for a 2.0.0-beta release that changes some basic requirements for the provider, and enables back-end migration to the new API platform. |
