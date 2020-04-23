@@ -100,6 +100,8 @@ New Relic has open-sourced this project. This project is provided AS-IS WITHOUT 
 
 _Please do not report issues with this software to New Relic Global Technical Support._
 
+## PGP Public Key
+The team's PGP public key can be accessed [here](https://newrelic.github.io/developer-toolkit/developer-toolkit.asc).
 
 ## Open Source License
 
