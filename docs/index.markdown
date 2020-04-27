@@ -12,6 +12,7 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
   * [New Relic CLI](#new-relic-cli)
+  * [New Relic Java Agent Ansible Role](#new-relic-java-agent-ansible-role)
   * [New Relic Client](#new-relic-client)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
 * Support
@@ -57,6 +58,15 @@ The New Relic CLI enables integration of New Relic into your existing workflows.
 * [Documentation](https://github.com/newrelic/newrelic-cli)
 * [Repo](https://github.com/newrelic/newrelic-cli)
 * [Docker Image](https://hub.docker.com/r/newrelic/cli)
+
+
+#### New Relic Java Agent Ansible Role
+
+The New Relic Java Agent Ansible Role installs and configures the New Relic Java agent. It should work with minimal configuration for applications running under Tomcat, Jetty, or Wildfly. We aim to support the most popular Java web servers over time.
+
+* [Documentation](https://github.com/newrelic/newrelic-java-agent-ansible-role#ansible-role-new-relic-java-agent)
+* [Repo](https://github.com/newrelic/newrelic-java-agent-ansible-role)
+* [Ansible Galaxy](https://galaxy.ansible.com/newrelic/newrelic_java_agent)
 
 
 #### New Relic Client
