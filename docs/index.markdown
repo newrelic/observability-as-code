@@ -33,7 +33,7 @@ assist you in your journey to increased consistency and decreased toil:
   * [Quick Start Video](https://www.youtube.com/watch?v=UwJ-7BLylJo) - Walk through how to configure New Relic via Terraform in just a few minutes.
   * [Getting Started Guide](https://www.terraform.io/docs/providers/newrelic/guides/getting_started.html) - Easy to follow example to get you started.
 * [New Relic CLI](#new-relic-cli)
-  * [Quick Start Video]() - Overview of the key features the New Relic CLI provides (Spoiler: Deployment Markers, Tag Management, and more!)
+  * [Quick Start Video](https://www.youtube.com/watch?v=g00AeKlECZA) - Overview of the key features the New Relic CLI provides (Spoiler: Deployment Markers, Tag Management, and more!)
   * [Getting Started Guide](https://github.com/newrelic/newrelic-cli/blob/master/docs/GETTING_STARTED.md) - For the quick copy/pasters out there. Get started ASAP.
 * [New Relic Client](#new-relic-client)
   * [Example usage](https://github.com/newrelic/newrelic-client-go#example) - Quick overview of importing this library into your own application.
