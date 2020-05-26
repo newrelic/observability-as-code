@@ -12,9 +12,10 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
   * [New Relic CLI](#new-relic-cli)
-  * [New Relic Java Agent Ansible Role](#new-relic-java-agent-ansible-role)
   * [New Relic Client](#new-relic-client)
+  * [Deployment Marker Github Action](https://github.com/marketplace/actions/new-relic-application-deployment-marker)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
+  * [New Relic Java Agent Ansible Role](#new-relic-java-agent-ansible-role)
 * Support
   * [Helpful Links](#helpful-links)
   * [Community](#community)
