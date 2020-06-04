@@ -13,6 +13,7 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
   * [New Relic CLI](#new-relic-cli)
   * [New Relic Client](#new-relic-client)
+  * [New Relic Kubernetes Operator](#new-relic-kubernetes-operator)
   * [Deployment Marker Github Action](https://github.com/marketplace/actions/new-relic-application-deployment-marker)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
   * [New Relic Java Agent Ansible Role](#new-relic-java-agent-ansible-role)
@@ -52,6 +53,7 @@ The New Relic Terraform Provider enables Observability as Code, reducing develop
 * [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/)
 * [Terraform Module for New Relic APM](https://registry.terraform.io/modules/newrelic/apm/newrelic/)
 
+
 #### New Relic CLI
 
 The New Relic CLI enables integration of New Relic into your existing workflows. Be it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.
@@ -61,13 +63,15 @@ The New Relic CLI enables integration of New Relic into your existing workflows.
 * [Docker Image](https://hub.docker.com/r/newrelic/cli)
 
 
-#### New Relic Java Agent Ansible Role
+#### New Relic Kubernetes Operator
 
-The New Relic Java Agent Ansible Role installs and configures the New Relic Java agent. It should work with minimal configuration for applications running under Tomcat, Jetty, or Wildfly. We aim to support the most popular Java web servers over time.
+The newrelic-kubernetes-operator is a Kubernetes Operator that facilitates management of New Relic resources from within
+your Kubernetes configuration. Managing New Relic resources via custom Kubernetes objects can be done the same way you
+manage built-in Kubernetes objects.
 
-* [Documentation](https://github.com/newrelic/newrelic-java-agent-ansible-role#ansible-role-new-relic-java-agent)
-* [Repo](https://github.com/newrelic/newrelic-java-agent-ansible-role)
-* [Ansible Galaxy](https://galaxy.ansible.com/newrelic/newrelic_java_agent)
+* [Documentation](https://github.com/newrelic/newrelic-kubernetes-operator)
+* [Repo](https://github.com/newrelic/newrelic-kubernetes-operator)
+* [Docker Image](https://hub.docker.com/r/newrelic/kubernetes-operator)
 
 
 #### New Relic Client
@@ -76,6 +80,15 @@ The New Relic Client provides the building blocks for many tools in the toolkit,
 
 * [Documentation](https://pkg.go.dev/github.com/newrelic/newrelic-client-go)
 * [Repo](https://github.com/newrelic/newrelic-client-go)
+
+
+#### New Relic Java Agent Ansible Role
+
+The New Relic Java Agent Ansible Role installs and configures the New Relic Java agent. It should work with minimal configuration for applications running under Tomcat, Jetty, or Wildfly. We aim to support the most popular Java web servers over time.
+
+* [Documentation](https://github.com/newrelic/newrelic-java-agent-ansible-role#ansible-role-new-relic-java-agent)
+* [Repo](https://github.com/newrelic/newrelic-java-agent-ansible-role)
+* [Ansible Galaxy](https://galaxy.ansible.com/newrelic/newrelic_java_agent)
 
 
 #### New Relic AWS CloudFormation Integration
