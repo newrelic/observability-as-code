@@ -85,7 +85,7 @@ To solve for the above problems, the initial version of the Developer Toolkit
 will contain the following resources.  All resources shall be built as Open
 Source projects, and actively engage with the broader community.
 
-* **[New Relic Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic/)**
+* **[New Relic Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic)**
   - The New Relic Terraform Provider enables Observability as Code, reduces
   developer toil, and allows users to manage their entire ecosystem in a single
   place.

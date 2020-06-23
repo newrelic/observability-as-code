@@ -45,8 +45,8 @@ assist you in your journey to increased consistency and decreased toil:
 The New Relic Terraform Provider enables Observability as Code, reducing developer toil, and allows users to manage their entire ecosystem in a single place.
 
 * [Documentation](https://www.terraform.io/docs/providers/newrelic/index.html)
-* [Repo](https://github.com/terraform-providers/terraform-provider-newrelic/)
-* [Project boards](https://github.com/terraform-providers/terraform-provider-newrelic/projects)
+* [Repo](https://github.com/newrelic/terraform-provider-newrelic)
+* [Project boards](https://github.com/newrelic/terraform-provider-newrelic/projects)
 
 
 #### New Relic Client
