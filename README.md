@@ -12,7 +12,7 @@ The New Relic Developer Toolkit is a suite of tools expressly built to ease the 
   * [Kanban Board](https://github.com/orgs/newrelic/projects/6) - Current work across all tools
 * Tools in the Toolkit
   * [New Relic Terraform Provider](#new-relic-terraform-provider)
-  * [New Relic API Client](#new-relic-api-client)
+  * [New Relic Client](#new-relic-client)
   * [New Relic CLI](#new-relic-cli)
   * [New Relic AWS CloudFormation Integration](#new-relic-aws-cloudformation-integration)
 * Support
