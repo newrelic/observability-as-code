@@ -1,0 +1,25 @@
+name: Sweeper
+
+on: push
+
+jobs:
+  sweep:
+    name: "Sweep test account"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.13.x
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Execute sweep
+      run: go run ./tools/sweep.go
+      env:
+        NEW_RELIC_ACCOUNT_ID: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+        NEW_RELIC_ADMIN_API_KEY: ${{ secrets.NEW_RELIC_ADMIN_API_KEY }}
+        NEW_RELIC_API_KEY: ${{ secrets.NEW_RELIC_API_KEY }}
+        NEW_RELIC_LICENSE_KEY: ${{ secrets.NEW_RELIC_LICENSE_KEY }}
+        NEW_RELIC_REGION: ${{ secrets.NEW_RELIC_REGION }}
