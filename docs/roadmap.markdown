@@ -153,9 +153,10 @@ ambiguous, and priorities / order is yet to be confirmed.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
-| **Current** | New Relic Client | Initial Code Gen | As the number of orchestration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
-| Proposed | New Relic CLI | NR1 Plugin | In the effort to consolidate command line interfaces into a consistent and easy user experience, we will initially adopt the current nr1 CLI as a plugin. |
-| Proposed | New Relic CLI | Plugin Service | In order to have a first-class plugin experience, we need to have a curated way to provide plugins to end-users in an automated way. Creating the pipeline for delivering plugins is a critical component in this initiative. |
+| Completed | New Relic Client | Initial Code Gen | As the number of orchestration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
+| **Current** | Terraform | July Bug Bash | It has been some time since the Terraform Provider 2.x release, so it's a good time to dig through for any issues and address as many of them as possible in a week |
+| Proposed | New Relic CLI | NR1 CLI Extension | In the effort to consolidate command line interfaces into a consistent and easy user experience, we will initially adopt the current nr1 CLI as an extension. |
+| Proposed | New Relic CLI | Extension Service | In order to have a first-class CLI experience, we need to have a curated way to provide extensions to end-users in an automated way. Creating the pipeline for delivering extensions is a critical component in this initiative. |
 | Proposed | Automated Actions | Initial work | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
 | Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
 | Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
