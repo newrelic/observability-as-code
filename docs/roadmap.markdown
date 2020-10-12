@@ -132,7 +132,7 @@ Fill out the feature set of the New Relic Terraform provider and continue to pro
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
 | Completed | New Relic CLI | CLI code generation | To increase the team's scalability and velocity when delivering new platform features to the New Relic CLI, we will investigate the possibility of generating CLI command code from NerdGraph schema in an automated way. |
-| Current | All | Sustaining efforts | To shore up accrued techincal debt, the team will work to make its codebases and processes more maintainable and resolve issues reported by customers. |
+| Current | All | Sustaining efforts | To shore up accrued technical debt, the team will work to make its codebases and processes more maintainable and resolve issues reported by customers. |
 | Planned | Terraform | NR1 Dashboards Support | To support the reimagined experience of New Relic One Dashboards, the team will integrate NR1 dashboard provisionment into the Terraform provider. |
 | Planned | All | Content creation | To showcase the functionality of our various tools and reduce the friction of getting started with automating deployments and observability with New Relic, we will create curated content in a variety of media formats such as conference presentations, walkthroughs and focused guided tours. |
 
