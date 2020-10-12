@@ -33,7 +33,7 @@ Whether you want to contribute code, have a great idea, or just notice a tpyo, w
 The Developer Toolkit is a set of tools that simplify New Relic configuration
 and management, accelerating the ability for developers to implement DevOps best
 practices. We've started by building around common open source tools and
-frameworks such as Terraform and CloudFormation, to simplify integrating
+frameworks such as Terraform, Kubernetes, and CloudFormation, to simplify integrating
 observability into automation workflows. As a developer, you have complete
 control through the New Relic Client.
 
@@ -79,11 +79,11 @@ organization this becomes a daunting task.
 
 
 
-## Developer Toolkit v1
+## Developer Toolkit
 
-To solve for the above problems, the initial version of the Developer Toolkit
-will contain the following resources.  All resources shall be built as Open
-Source projects, and actively engage with the broader community.
+To solve for the above problems, the Developer Toolkit contains a variety of
+resources.  All resources shall be built as Open Source projects, and actively
+engage with the broader community. Projects in the Developer Toolkit include:
 
 * **[New Relic Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic)**
   - The New Relic Terraform Provider enables Observability as Code, reduces
@@ -116,26 +116,40 @@ Source projects, and actively engage with the broader community.
      * Tagging
    <br/>
 
-* **[New Relic AWS CloudFormation Integration](https://github.com/newrelic/cloudformation-partner-integration)**
-  - The AWS CloudFormation Integration enables developers using CloudFormation
-  to easily provision a subset of New Relic resources.
-
-   * Build on the NR Client
-   * Initial implementation of
-     * Basic NRQL Alert configuration
-   <br/>
+A full list of projects can be found on the [New Relic Open Source website](https://opensource.newrelic.com/explore-projects/?tag=Developer%20Toolkit).
 
 
-## Milestones
+## Current and past work
 
 Ongoing work will be tracked in the [Developer Toolkit](https://github.com/orgs/newrelic/projects/6)
 project, which contains overview and details status for each individual tool that is in flight.  Here is
-the latest summary for planned work by the New Relic team:
+the latest summary of work planned and already executed by the team:
+
+### Current (2020 Oct-Dec)
+
+Fill out the feature set of the New Relic Terraform provider and continue to provide targeted guides and walkthroughs to support the projects in the toolkit.
+
+| State | Tool | Milestone | Rationale |
+| ----- | ---- | --------- | --------- |
+| Completed | New Relic CLI | CLI code generation | To increase the team's scalability and velocity when delivering new platform features to the New Relic CLI, we will investigate the possibility of generating CLI command code from NerdGraph schema in an automated way. |
+| Current | All | Sustaining efforts | To shore up accrued techincal debt, the team will work to make its codebases and processes more maintainable and resolve issues reported by customers. |
+| Planned | Terraform | NR1 Dashboards Support | To support the reimagined experience of New Relic One Dashboards, the team will intergrate NR1 dashboard provisionment into the Terraform provider. |
+| Planned | All | Content creation | To showcase the functionality of our various tools and reduce the friction of getting started with automating deployments and observability with New Relic, we will create curated content in a variety of media formats such as conference presentations, walkthroughs and focused guided tours. |
+
+### 2020 Jul-Sep
+
+Work towards increasing effeciencies in how the team operates, and drive
+consistency in the tools that are being delivered.
+
+| State | Tool | Milestone | Rationale |
+| ----- | ---- | --------- | --------- |
+| Completed | New Relic Client | Initial Code Gen | As the number of orchestration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
+| Completed | Terraform | July Bug Bash | It has been some time since the Terraform Provider 2.x release, so it's a good time to dig through for any issues and address as many of them as possible in a week |
 
 
 ### 2020 Apr-Jun
 
-Following on the release of the Developer Toolkit v1, the focus is on
+Following on the initial release of the Developer Toolkit, the focus is on
 improving ease of adoption and increasing the depth of coverage for the tools.
 
 | State | Tool | Milestone | Rationale |
@@ -145,22 +159,6 @@ improving ease of adoption and increasing the depth of coverage for the tools.
 | Completed | New Relic Kubernetes Operator | Initial Support k8s | Kubernetes has become the defacto standard for containerized services. Custom operators allow configuration of third-party services within the the kubernetes so your monitoring definition is tightly coupled to the deployment, simplifying overall configuration. |
 | Completed | New Relic Terraform Provider | 2.0 Beta | In order to start migrating more usage from the legacy REST APIs to NerdGraph, there are a few breaking changes that need to happen.  This will lay all the groundwork for a 2.0.0-beta release that changes some basic requirements for the provider, and enables back-end migration to the new API platform. |
 
-### 2020 Jul-Sep
-
-Work towards increasing effeciencies in how the team operates, and drive
-consistency in the tools that are being delivered. This area is a bit more
-ambiguous, and priorities / order is yet to be confirmed.
-
-| State | Tool | Milestone | Rationale |
-| ----- | ---- | --------- | --------- |
-| Completed | New Relic Client | Initial Code Gen | As the number of orchestration tools increases, and the depth of the API coverage expands through the migration to GraphQL, we must reduce the amount of manual work to stay up to date.  Following existing patterns, research creation of a code generation project to ensure consistency between tools, and decrease time to delivery of new features. |
-| **Current** | Terraform | July Bug Bash | It has been some time since the Terraform Provider 2.x release, so it's a good time to dig through for any issues and address as many of them as possible in a week |
-| Proposed | New Relic CLI | NR1 CLI Extension | In the effort to consolidate command line interfaces into a consistent and easy user experience, we will initially adopt the current nr1 CLI as an extension. |
-| Proposed | New Relic CLI | Extension Service | In order to have a first-class CLI experience, we need to have a curated way to provide extensions to end-users in an automated way. Creating the pipeline for delivering extensions is a critical component in this initiative. |
-| Proposed | Automated Actions | Initial work | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
-| Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
-| Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
-
 ### Backlog
 
 The following items are possible future work that has not yet been committed or
@@ -169,9 +167,15 @@ prioritizing, adding to, or removing from scope.
 
 | State | Tool | Milestone | Rationale |
 | ----- | ---- | --------- | --------- |
+| Proposed | Automated Actions | Initial work | Working with automation service providers, the New Relic Client should become a first class application that can be consumed by the community. |
+| Proposed | New Relic CLI | New Relic Logs Support | Integration of New Relic Logs into the NR CLI extends the user experience of New Relic's logging solution into the terminal. |
+| Proposed | New Relic CLI | Lambda Support | For community members already leveraging Serverless for their workflows, enabling the New Relic Client to be deployed in this way creates a quick path to embed New Relic along side their existing best practices. |
 | Proposed | CloudFormation | Feature Parity | As users adopt the CloudFormation partner integration, increase the API coverage to reach feature parity with the other orchestration tooling. |
 | Proposed | Developer Toolkit | Initial IDE Plugin | Building a plugin for commonly used IDEs enables users to move faster, utilizing the environment that they are already accustomed to. Initial work is to-be-defined, but should include items such as syntax highlighting for the New Relic Terraform Provider and/or CloudFormation Integration |
 | Proposed | New Relic Client | Insights | Migrate the [go-insights](https://github.com/newrelic/go-insights) package into the New Relic Client |
+| Planned | Terraform | Developer Vignettes | The Developer Toolkit team will work with other teams in the Developer Ecosystem group to enable a self-service, in-product, cross-sectional demo scenarios featuring automation tooling. |
+| Planned | Terraform | Cloud provider integration | To support the cloud provider integration capabilities offered by the New Relic One platform, the team will intergrate cloud provider integration provisionment into the Terraform provider. |
+| Planned | Terraform | Terraform code generation | To increase the team's scalability and velocity when delivering new platform features to the Terraform provider, we will investigate the possibility of generating provider resource code from NerdGraph schema in an automated way. |
 
 ### Sustaining
 
