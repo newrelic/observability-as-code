@@ -133,8 +133,8 @@ Fill out the feature set of the New Relic Terraform provider and continue to pro
 | ----- | ---- | --------- | --------- |
 | Completed | New Relic CLI | CLI code generation | To increase the team's scalability and velocity when delivering new platform features to the New Relic CLI, we will investigate the possibility of generating CLI command code from NerdGraph schema in an automated way. |
 | Current | All | Sustaining efforts | To shore up accrued technical debt, the team will work to make its codebases and processes more maintainable and resolve issues reported by customers. |
-| Planned | Terraform | NR1 Dashboards Support | To support the reimagined experience of New Relic One Dashboards, the team will integrate NR1 dashboard provisionment into the Terraform provider. |
-| Planned | All | Content creation | To showcase the functionality of our various tools and reduce the friction of getting started with automating deployments and observability with New Relic, we will create curated content in a variety of media formats such as conference presentations, walkthroughs and focused guided tours. |
+| Planned | Terraform | NR1 Dashboards Support | To support the reimagined experience of New Relic One Dashboards, the team will intergrate NR1 dashboard provisionment into the Terraform provider. |
+| Planned | All | Code generation | To increase the team's scalability and velocity when delivering new platform features , we will investigate the possibility of generating project code from NerdGraph schema in an automated way. |
 
 ### 2020 Jul-Sep
 
@@ -176,6 +176,7 @@ prioritizing, adding to, or removing from scope.
 | Planned | Terraform | Developer Vignettes | The Developer Toolkit team will work with other teams in the Developer Ecosystem group to enable a self-service, in-product, cross-sectional demo scenarios featuring automation tooling. |
 | Planned | Terraform | Cloud provider integration | To support the cloud provider integration capabilities offered by the New Relic One platform, the team will intergrate cloud provider integration provisionment into the Terraform provider. |
 | Planned | Terraform | Terraform code generation | To increase the team's scalability and velocity when delivering new platform features to the Terraform provider, we will investigate the possibility of generating provider resource code from NerdGraph schema in an automated way. |
+| Planned | All | Content creation | To showcase the functionality of our various tools and reduce the friction of getting started with automating deployments and observability with New Relic, we will create curated content in a variety of media formats such as conference presentations, walkthroughs and focused guided tours. |
 
 ### Sustaining
 
