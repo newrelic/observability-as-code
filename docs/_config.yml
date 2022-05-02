@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,11 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: New Relic - Developer Toolkit
+title: New Relic - Observability as Code
 email: opensource@newrelic.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The New Relic Developer Toolkit is a suite of tools expressly built to ease the configuration,
-  management, and usage of New Relic through automation.
+  New Relic provides a premier suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.
 baseurl: "/developer-toolkit" # the subpath of your site, e.g. /blog
 url: "https://newrelic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: newrelic
