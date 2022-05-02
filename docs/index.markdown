@@ -1,5 +1,3 @@
-# Observability as Code
-
 New Relic provides a premier suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation. This repo serves as a central location for you to discover the tools currently available, see what's being worked on right now, and provide feedback.
 
 * [Project Website](https://newrelic.github.io/observability-as-code/) - Main source of information about New Relic Observability as Code

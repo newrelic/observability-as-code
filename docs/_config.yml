@@ -22,7 +22,7 @@ title: New Relic - Observability as Code
 email: opensource@newrelic.com
 description: >- # this means to ignore newlines until "baseurl:"
   New Relic provides a premier suite of tools expressly built to ease the configuration, management, and usage of New Relic through automation.
-baseurl: "/developer-toolkit" # the subpath of your site, e.g. /blog
+baseurl: "/observability-as-code" # the subpath of your site, e.g. /blog
 url: "https://newrelic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: newrelic
 #github_username:  jekyll
