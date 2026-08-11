@@ -5,6 +5,9 @@ on:
     # Everyday at 13:00 UTC (06:00 PST)
     - cron: "0 13 * * *"
 
+permissions:
+  contents: read
+
 jobs:
   sweep:
     name: "Sweep test account"
